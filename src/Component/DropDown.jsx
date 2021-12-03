@@ -19,6 +19,7 @@ const DropDown = ({ publishers, searchText }) => {
     if (x.toLowerCase().includes(searchText.toLowerCase())) {
       return item;
     }
+    return null;
   });
   return (
     <div className="Dropdown">
