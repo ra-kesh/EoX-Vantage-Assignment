@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import DropDown from "../Component/DropDown";
 
 export const Layout = ({ children, publishers }) => {
   const [searchText, setSearchText] = useState("");
@@ -21,9 +22,7 @@ export const Layout = ({ children, publishers }) => {
             onChange={(e) => setSearchText(e.target.value)}
           />
           {searchText.length > 0 && (
-            <div className="Dropdown">
-              <span>djedj</span>
-            </div>
+            <DropDown publishers={publishers} searchText={searchText} />
           )}
         </div>
       </div>
