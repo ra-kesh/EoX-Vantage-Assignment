@@ -23,9 +23,9 @@ const DropDown = ({ publishers, searchText }) => {
   });
   return (
     <div className="Dropdown">
-      {filteredPublishers.map(({ TITLE }) => (
-        <div>
-          <h5>{TITLE}</h5>
+      {filteredPublishers.map(({ TITLE, URL }) => (
+        <div style={{ cursor: "pointer" }}>
+          <h5 onClick={() => window.open(URL, "_blank")}>{TITLE}</h5>
         </div>
       ))}
     </div>
